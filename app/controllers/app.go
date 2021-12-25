@@ -27,7 +27,7 @@ func (c App) Index() revel.Result {
 	tmpStr := strings.Join(tmpArray[:], ",")
 	encryptor.Write([]byte(tmpStr))
 	encryptedString := base64.URLEncoding.EncodeToString(encryptor.Sum(nil))
-	// let myArray = ["Q", "fP", "AQ", "L"];
+
 	fmt.Printf("tmpArray: %s\n", tmpArray)
 	fmt.Printf("signature: %s\n", signature)
 	fmt.Printf("encryptedString: %s\n", encryptedString)
